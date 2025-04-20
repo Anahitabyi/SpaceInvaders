@@ -2,7 +2,7 @@
 - Project name: platformer game
 - Unity version: Unity 6000.0.42f1
 - Active game object:
-  - Name: laser
+  - Name: EventSystem
   - Tag: Untagged
-  - Layer: Laser
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
