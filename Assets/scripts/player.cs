@@ -7,12 +7,14 @@ public class player : MonoBehaviour
     public projectile laserPrefab;
     [SerializeField] private float moveSpeed = 5.0f;
     private Rigidbody2D rb;
+    private PlayerHealth health;
     private Vector2 moveInput;
     private bool _laserActive;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        health = GetComponent<PlayerHealth>();
     }
 
     private void Update()

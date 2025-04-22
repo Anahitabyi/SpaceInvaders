@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - background
   - Water
   - UI
   - Player
@@ -43,6 +43,18 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 195501079
+    locked: 0
+  - name: UFO
+    uniqueID: 1685779027
+    locked: 0
+  - name: UI
+    uniqueID: 2891698903
+    locked: 0
+  - name: hearts
+    uniqueID: 2613592423
     locked: 0
   m_RenderingLayers:
   - Default

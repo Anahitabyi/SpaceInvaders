@@ -8,7 +8,7 @@ public class invaders : MonoBehaviour
 
     public int rows = 5;
 
-    public int columns = 11;
+    public int columns = 6;
 
     private Vector3 _direction = Vector3.right;
 
