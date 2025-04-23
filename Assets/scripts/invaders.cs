@@ -94,7 +94,7 @@ public class invaders : MonoBehaviour
 
         if (this.amountKilled >= this.totalInvaders)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); //if we do not want scoring and stuff but we want that.
+            SceneManager.LoadScene("WinScreen");
         }
     }
     private void MissileAttack()
