@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem.XR.Haptics;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -42,6 +43,6 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Die()
     {
-        Debug.Log("player is dead");
+        SceneManager.LoadScene("GameOver");
     }
 }

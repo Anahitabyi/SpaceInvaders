@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class invader : MonoBehaviour
 {
     public Sprite[] animationSprites;
@@ -9,6 +10,7 @@ public class invader : MonoBehaviour
     private int _animationFrame;
     public System.Action killed;
 
+    [SerializeField] private LayerMask bunkerLayer;
 
     private void Awake()
     {
@@ -39,5 +41,16 @@ public class invader : MonoBehaviour
             this.gameObject.SetActive(false);
 
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("bunkers"))
+        {
+            Debug.Log("Bunker trigger detected!");
+            GameOver();
+        }
+    }
+    private void GameOver()
+    {
+        Debug.Log("Invaders reached bunkers! Game Over.");
+        SceneManager.LoadScene("GameOver");
     }
 }

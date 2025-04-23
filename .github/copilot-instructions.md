@@ -2,7 +2,7 @@
 - Project name: platformer game
 - Unity version: Unity 6000.0.42f1
 - Active game object:
-  - Name: healthUI
+  - Name: invaders
   - Tag: Untagged
-  - Layer: Default
+  - Layer: invaders
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

@@ -26,14 +26,14 @@ public class HealthUI : MonoBehaviour
             {
                 hearts[i].sprite = emptyHearts;
             }
-            if (i < maxHealth)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
+            //if (i < maxHealth)
+            //{
+            //    hearts[i].enabled = true;
+            //}
+            //else
+            //{
+            //    hearts[i].enabled = false;
+            //}
 
         }
     }
