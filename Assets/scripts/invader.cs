@@ -9,6 +9,7 @@ public class invader : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private int _animationFrame;
     public System.Action killed;
+    public GameObject ExplosionPrefab;
 
     [SerializeField] private LayerMask bunkerLayer;
 
@@ -37,6 +38,11 @@ public class invader : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
+            if (ExplosionPrefab != null)
+            {
+                GameObject explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+                Destroy(explosion, 1f);
+            }
             this.killed.Invoke();
             this.gameObject.SetActive(false);
 

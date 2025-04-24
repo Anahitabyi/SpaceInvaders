@@ -101,6 +101,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4215230241873189883, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
+      propertyPath: ExplosionPrefab
+      value: 
+      objectReference: {fileID: 4008518461450658619, guid: 6314a331c46d4054a87dc9beb797f415, type: 3}
+    - target: {fileID: 4215230241873189883, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
       propertyPath: bunkerLayer.m_Bits
       value: 2048
       objectReference: {fileID: 0}
