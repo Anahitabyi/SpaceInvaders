@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 public class invader : MonoBehaviour
 {
     public Sprite[] animationSprites;
@@ -10,6 +11,8 @@ public class invader : MonoBehaviour
     private int _animationFrame;
     public System.Action killed;
     public GameObject ExplosionPrefab;
+    private ScoreUI ScoreUI;
+    [SerializeField] private int points;
 
     [SerializeField] private LayerMask bunkerLayer;
 
@@ -21,6 +24,8 @@ public class invader : MonoBehaviour
     private void Start()
     {
         InvokeRepeating(nameof(animateSprite), animationTime, animationTime);
+        this.ScoreUI = GameObject.Find("ScoreManager").GetComponent <ScoreUI>();
+
     }
     private void animateSprite()
 
@@ -43,8 +48,10 @@ public class invader : MonoBehaviour
                 GameObject explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
                 Destroy(explosion, 1f);
             }
+            this.ScoreUI.UpdateScore(50);
             this.killed.Invoke();
             this.gameObject.SetActive(false);
+
 
         }
 

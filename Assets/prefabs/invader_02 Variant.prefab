@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655735679505969318, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2655735679505969318, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2700510229439465559, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99,6 +99,10 @@ PrefabInstance:
     - target: {fileID: 2700510229439465559, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215230241873189883, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
+      propertyPath: points
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4215230241873189883, guid: 01ea1d935dff1514593ee6fa2165ea46, type: 3}
       propertyPath: ExplosionPrefab
