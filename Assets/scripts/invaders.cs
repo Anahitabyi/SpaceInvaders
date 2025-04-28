@@ -108,6 +108,7 @@ public class invaders : MonoBehaviour
             if (Random.value < 1.0f / (float)this.amountAlive)
             {
                 Instantiate(missilePrefab, invader.position, Quaternion.identity);
+                SoundEffectManager.play("invadershoot");
                 break;
             }
         }

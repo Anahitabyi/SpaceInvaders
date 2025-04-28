@@ -2,6 +2,8 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem.XR.Haptics;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
 
     public HealthUI healthUI;
+    public GameObject PlayerExplosionPrefab;
 
     private void Start()
     {
@@ -30,8 +33,25 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealthUI();
 
         if (currentHealth <= 0) {
-            Die();
+            Instantiate(PlayerExplosionPrefab, transform.position, Quaternion.identity);
+            SoundEffectManager.play("playerexplosion");
+            GetComponent<player>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            Light2D[] lights = GetComponentsInChildren<Light2D>();
+            foreach (Light2D light in lights)
+            {
+                light.enabled = false;
+            }
+
+            StartCoroutine(DieWithDelay());
         }
+    }
+    private IEnumerator DieWithDelay()
+    {
+        //Wait for 1 second before loading game over
+        yield return new WaitForSeconds(1f);
+        Die();
     }
     private void UpdateHealthUI()
     {

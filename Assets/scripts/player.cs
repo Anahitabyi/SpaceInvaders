@@ -41,6 +41,7 @@ public class player : MonoBehaviour
             if (!_laserActive)
             {
                 projectile projectile = Instantiate(this.laserPrefab, this.transform.position, Quaternion.identity);
+                SoundEffectManager.play("shoot");
                 projectile.destroyed += LaserDestroyed;
                 _laserActive = true;
             }

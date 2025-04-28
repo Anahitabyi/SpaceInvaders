@@ -177,3 +177,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 1, z: 0}
   speed: 30
+  damage: 1
+  playerExplosionPrefab: {fileID: 7804285842148751173, guid: 5768b55e30382e444aee34b4fde3ca9f, type: 3}

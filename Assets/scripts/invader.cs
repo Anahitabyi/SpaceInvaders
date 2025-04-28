@@ -46,12 +46,12 @@ public class invader : MonoBehaviour
             if (ExplosionPrefab != null)
             {
                 GameObject explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
-                Destroy(explosion, 1f);
+                Destroy(explosion, 0.25f);
             }
             this.ScoreUI.UpdateScore(50);
             this.killed.Invoke();
             this.gameObject.SetActive(false);
-
+            SoundEffectManager.play("killedinvader");
 
         }
 

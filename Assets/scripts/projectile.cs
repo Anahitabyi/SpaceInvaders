@@ -8,6 +8,7 @@ public class projectile : MonoBehaviour
     public System.Action destroyed;
     public int damage = 1;
     private ScoreUI scoreUI;
+    //public GameObject playerExplosionPrefab;
 
     //private void Start()
     //{
@@ -24,6 +25,6 @@ public class projectile : MonoBehaviour
         {
             this.destroyed.Invoke();
         }
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
     }
 }
