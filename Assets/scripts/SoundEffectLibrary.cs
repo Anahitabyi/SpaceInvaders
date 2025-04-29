@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Centralized library for managing and accessing sound effects across the game
 public class SoundEffectLibrary : MonoBehaviour
 {
     [SerializeField] private SoundEffect[] soundEffects;
@@ -10,6 +11,7 @@ public class SoundEffectLibrary : MonoBehaviour
 
     private void Awake()
     {
+        // Singleton pattern implementation
         if (instance == null)
         {
             instance = this;
@@ -24,6 +26,7 @@ public class SoundEffectLibrary : MonoBehaviour
 
     private void InitializeDictionary()
     {
+        //add each sound effect to the library
         soundDictionary = new Dictionary<string, AudioClip>();
         foreach (SoundEffect soundEffect in soundEffects)
         {
@@ -33,6 +36,7 @@ public class SoundEffectLibrary : MonoBehaviour
             }
         }
     }
+
 
     public static AudioClip GetAudioClip(string name)
     {

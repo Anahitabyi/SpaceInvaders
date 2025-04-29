@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class SoundEffectManager : MonoBehaviour
 {
+
     private static AudioSource audioSource; 
     private static SoundEffectManager instance;
     private static SoundEffectLibrary soundEffectLibrary;
     private void Awake()
     {
+        // Implement singleton pattern - only one instance allowed
         if (instance == null)
         {
             instance = this;
@@ -21,6 +23,8 @@ public class SoundEffectManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    //plays the sound that is passed to this method
     public static void play(string Soundname)
     {
         AudioClip audioClip = SoundEffectLibrary.GetAudioClip(Soundname);

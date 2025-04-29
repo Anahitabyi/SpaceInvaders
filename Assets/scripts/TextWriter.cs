@@ -10,6 +10,7 @@ public class TextWriter : MonoBehaviour
     private float timePerCharacter;
     private float timer;
 
+    //writes the text of game over screen
     public void AddWriter(TMP_Text UIText, string textToWrite, float timePerCharacter)
     {
         this.UIText = UIText;
@@ -26,14 +27,14 @@ public class TextWriter : MonoBehaviour
 
             while (timer <= 0)
             {
-                // Display next character
+                //Display next character
                 timer += timePerCharacter;
                 CharacterIndex++;
                 UIText.text = textToWrite.Substring(0, CharacterIndex);
 
                 if (CharacterIndex >= textToWrite.Length)
                 {
-                    // Entire String has been displayed.
+                    //Entire String has been displayed.
                     UIText = null;
                     return;
                 }

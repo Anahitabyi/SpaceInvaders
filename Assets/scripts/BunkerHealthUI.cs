@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+//displays the bunker health ui
 public class BunkerHealthUI : MonoBehaviour
 {
     public int health;
